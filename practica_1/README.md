@@ -7,7 +7,11 @@ App de escritorio en C++/GTK para:
 * 💡 **Brillo** y 🎚️ **Contraste** (en la imagen original y en la de grises)
 * 📤 **Exportar CSV** (Color `0x00RRGGBB`, Rojo, Verde, Azul, Gris)
 
-> La arquitectura “lector con getters + vista” y la separación por **máscaras/corrimientos** está inspirada en los materiales de clase del profe. &#x20;
+> La arquitectura “lector con getters + vista” y la separación por **máscaras/corrimientos** está inspirada en los materiales de clase. &#x20;
+<img width="1908" height="1031" alt="image" src="https://github.com/user-attachments/assets/19325b1a-5613-45ce-9d08-9ebf84168ca3" />
+<img width="1908" height="1031" alt="image" src="https://github.com/user-attachments/assets/07d7d857-5348-4784-bfb4-48bf09adb6d0" />
+<img width="1908" height="1031" alt="image" src="https://github.com/user-attachments/assets/a43cc062-0ece-4be6-b431-aeec45913650" />
+
 
 ---
 
