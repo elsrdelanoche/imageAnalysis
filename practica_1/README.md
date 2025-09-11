@@ -79,7 +79,7 @@ g++ -std=c++17 -Wall -Wextra main.cpp -o image_channel_extractor \
 
 ---
 
-## 🧪 API interna (estilo “Java del profe”)
+## 🧪 API interna (estilo Java)
 
 Para replicar ejercicios/labs:
 
