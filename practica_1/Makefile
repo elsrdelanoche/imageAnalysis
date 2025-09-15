@@ -1,43 +1,29 @@
-# Makefile para Image Channel Extractor
+CXX      := g++
+CXXFLAGS := -std=c++17 -Wall -Wextra $(shell pkg-config --cflags gtk+-3.0 gdk-pixbuf-2.0)
+LDFLAGS  := $(shell pkg-config --libs gtk+-3.0 gdk-pixbuf-2.0)
 
-# Compilador y flags
-CXX = g++
-CXXFLAGS = -std=c++17 -Wall -Wextra
+INCLUDES := -Iinclude
+SRC_DIR  := src
+OBJ_DIR  := build
 
-# Paquetes GTK - Versión compatible con diferentes shells
-GTK_CFLAGS := $(shell pkg-config --cflags gtk+-3.0)
-GTK_LIBS := $(shell pkg-config --libs gtk+-3.0)
+SRCS := \
+  $(SRC_DIR)/main.cpp \
+  $(SRC_DIR)/ui/view.cpp \
+  $(SRC_DIR)/ui/controller.cpp
 
-# Archivos
-TARGET = image_channel_extractor
-SOURCES = main.cpp
+OBJS := $(SRCS:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
 
-# Reglas
+TARGET := image_channel_extractor
+
 all: $(TARGET)
 
-$(TARGET): $(SOURCES)
-	$(CXX) $(CXXFLAGS) $(GTK_CFLAGS) -o $(TARGET) $(SOURCES) $(GTK_LIBS)
+$(TARGET): $(OBJS)
+	$(CXX) $(OBJS) -o $@ $(LDFLAGS)
 
-# Instalación de dependencias
-deps-ubuntu:
-	sudo apt update
-	sudo apt install -y build-essential pkg-config libgtk-3-dev
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
+	@mkdir -p $(dir $@)
+	$(CXX) $(CXXFLAGS) $(INCLUDES) -c $< -o $@
 
-deps-arch:
-	sudo pacman -S base-devel pkgconf gtk3 harfbuzz
-
-deps: deps-ubuntu
-
-# Ejecutar
-run: $(TARGET)
-	./$(TARGET)
-
-# Limpiar
 clean:
-	rm -f $(TARGET)
+	rm -rf $(OBJ_DIR) $(TARGET)
 
-# Debug
-debug: CXXFLAGS += -g -DDEBUG
-debug: $(TARGET)
-
-.PHONY: all clean run deps debug
