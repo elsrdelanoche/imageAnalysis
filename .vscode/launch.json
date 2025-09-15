@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/alfredo/Documents/imageAnalysis/practica_1",
-      "program": "/home/alfredo/Documents/imageAnalysis/practica_1/build/Debug/outDebug",
+      "cwd": "/home/alfredo/Documents/imageAnalysis/Practica_1/src",
+      "program": "/home/alfredo/Documents/imageAnalysis/Practica_1/src/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
