@@ -1,0 +1,3 @@
+/home/alfredo/Documents/ColorTransformsGTK_v2/build/CMakeFiles/coltrans.dir
+/home/alfredo/Documents/ColorTransformsGTK_v2/build/CMakeFiles/edit_cache.dir
+/home/alfredo/Documents/ColorTransformsGTK_v2/build/CMakeFiles/rebuild_cache.dir
