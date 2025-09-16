@@ -94,8 +94,11 @@ El proyecto sigue un enfoque **MVC**:
 ---
 
 ## 📸 Capturas
+<img width="1908" height="1031" alt="image" src="https://github.com/user-attachments/assets/f2b4bbe3-bc76-4b09-8750-1cdad74a6873" />
+<img width="1908" height="1031" alt="image" src="https://github.com/user-attachments/assets/30938bc1-0892-4e93-b449-5e972064e24c" />
+<img width="1908" height="1031" alt="image" src="https://github.com/user-attachments/assets/ef9e99b9-fd66-41f2-8dc9-6e0716955cfe" />
+<img width="1908" height="1031" alt="image" src="https://github.com/user-attachments/assets/61e10b19-4661-4127-8ca8-96e7381b8def" />
 
-*(Agrega aquí imágenes de la ventana principal mostrando los canales y sliders)*
 
 ---
 
@@ -108,8 +111,8 @@ El proyecto sigue un enfoque **MVC**:
 ---
 
 ## 🧑‍💻 Autor
-
-Proyecto desarrollado en **C++17** como práctica universitaria de **Procesamiento Digital de Imágenes**.  
+Alfredo Bautista
+Proyecto desarrollado en **C++17** como práctica universitaria de **ImageAnalysis | Vision por computadora**.  
 Diseñado y probado en **Arch Linux**.  
 
 ---
