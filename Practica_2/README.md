@@ -147,7 +147,7 @@ ColorTransformsGTK_v2/
 <img width="1908" height="1031" alt="image" src="https://github.com/user-attachments/assets/aa4f9e7e-a818-405e-99c2-80da527613c3" />
 
 ### Transformación CMY -> CMYK
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/fd4c8b37-5312-482a-887b-f1ac074cb7b7" />
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/7d14e476-b017-4cf9-b853-b0ce4b14d572" />
 
 ### Transformación CMYK -> CMY
 <img width="1908" height="1031" alt="image" src="https://github.com/user-attachments/assets/d8483cd9-8348-4a46-b0d3-3c8e8ad5a9de" />
