@@ -9,7 +9,6 @@ https://github.com/<tu-usuario>/ColorTransformsGTK_v2
 > - Panel izquierdo: cargar imagen, vista previa, selector de transformación, **modo de visualización por canal**.
 > - Panel derecho: grillas adaptativas con los canales del **origen**, **intermedios** y **destino**, cada uno con su **pie de imagen**.
 
----
 
 ## ✨ Funcionalidades
 
@@ -35,7 +34,6 @@ https://github.com/<tu-usuario>/ColorTransformsGTK_v2
   - **Controlador**: callbacks GTK que conectan ambos.
 - **Rango numérico**: internamente normalizamos a `[0,1]`; al visualizar convertimos a bytes **0x00RRGGBB** (0–255).
 
----
 
 ## 🖥️ Requisitos
 
@@ -49,7 +47,6 @@ sudo pacman -S base-devel cmake pkgconf gtk3 gdk-pixbuf2
 sudo apt-get install -y build-essential cmake pkg-config libgtk-3-dev libgdk-pixbuf2.0-dev
 ```
 
----
 
 ## ⚙️ Compilación y ejecución
 
@@ -62,8 +59,6 @@ make -j$(nproc)
 ./coltrans
 ```
 
----
-
 ## 🧭 Uso
 
 1. **Cargar imagen** (PNG/JPG, RGB 8 bits).
@@ -73,7 +68,6 @@ make -j$(nproc)
 
 Sugerencia: cambia el tamaño de la ventana; el grid se refluye para mantener miniaturas uniformes.
 
----
 
 ## 🧪 Modelos y fórmulas
 
@@ -128,7 +122,7 @@ Todos los valores trabajan normalizados en `[0,1]`. Donde aplica, se recortan a 
   - `C = V*S`, `H' = H*6`, `X = C*(1−| (H' mod 2) − 1 |)`, `m = V−C`
   - Asignar `(R,G,B)` según sextante `H'` y sumarle `m`
 
----
+
 
 ## 🧩 Estructura del proyecto
 
@@ -143,52 +137,40 @@ ColorTransformsGTK_v2/
    ├─ transform.hpp/.cpp    # Fórmulas puras de los modelos
 ```
 
----
 
-## 🐛 Problemas conocidos
-
-- Actualmente solo está implementada la visualización *Tintado*.
-- Pseudocolor básico pendiente de mejorar.
-- Y/I/Q se muestran en gris; falta codificación divergente más informativa.
-- No hay tooltip de inspección por píxel (valor 0–255 y hex 0xRRGGBB).
-
----
-
-## 🗺️ Roadmap (ideas)
-
-- Añadir visualización **Gris** y **Pseudocolor**.
-- Tooltip por píxel con `(R,G,B)`, `(H,S,V)`, etc., y 0xRRGGBB.
-- Exportar grillas como *contact sheet* (PNG).
-- Perfiles ICC / gestión de color.
-- Explorar `gtkmm` (C++ API) como alternativa a GTK C.
-
----
-
-## 🤝 Contribuir
-
-1. *Fork* y rama de feature: `feat/nombre`.
-2. `clang-format` o estilo consistente (K&R/LLVM).
-3. PR con descripción, screenshots y ejemplos de entrada/salida.
-
----
-
-## 📜 Licencia
-
-MIT © <tu-nombre> — Consulta el archivo `LICENSE`.
-
----
 
 ## 📸 Capturas de pantalla
 
-Coloca tus capturas dentro de:
+### Transformación RGB -> CMY
+<img width="1908" height="1031" alt="image" src="https://github.com/user-attachments/assets/37a1f8b2-bec9-431a-bde1-65a6b2adbc16" />
 
-```
-docs/screenshots/
-```
+### Transformación CMY -> RGB
+<img width="1908" height="1031" alt="image" src="https://github.com/user-attachments/assets/aa4f9e7e-a818-405e-99c2-80da527613c3" />
 
-Ejemplo en el README:
+### Transformación CMY -> CMYK
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/fd4c8b37-5312-482a-887b-f1ac074cb7b7" />
 
-```markdown
-![Vista RGB → CMY](docs/screenshots/rgb_to_cmy.png)
-![Vista CMY → RGB](docs/screenshots/cmy_to_rgb.png)
-```
+### Transformación CMYK -> CMY
+<img width="1908" height="1031" alt="image" src="https://github.com/user-attachments/assets/d8483cd9-8348-4a46-b0d3-3c8e8ad5a9de" />
+
+### Transformación RGB -> YIQ
+<img width="1908" height="1031" alt="image" src="https://github.com/user-attachments/assets/2945465e-d9df-4902-a7ea-386f474f06b2" />
+
+### Transformación YIQ -> RGB
+<img width="1908" height="1031" alt="image" src="https://github.com/user-attachments/assets/f2c312a8-5c9d-424a-b1c0-5db3f80acd74" />
+
+### Transformación RGB -> HSI
+<img width="1908" height="1031" alt="image" src="https://github.com/user-attachments/assets/129de63c-24c9-47ca-a626-4903a171af0e" />
+
+### Transformación HSI -> RGB
+<img width="1908" height="1031" alt="image" src="https://github.com/user-attachments/assets/b6c6aad6-49e4-4e82-a288-d986f6fa4e74" />
+
+### Transformación RGB -> HSV
+<img width="1908" height="1031" alt="image" src="https://github.com/user-attachments/assets/1118f94e-41ce-4eed-baea-02b4ddc386e9" />
+
+### Transformación HSV -> RGB
+<img width="1908" height="1031" alt="image" src="https://github.com/user-attachments/assets/857fe146-b318-44b3-931e-dd3d25b48e23" />
+
+
+## 📜 Licencia
+MIT 
