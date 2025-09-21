@@ -3,7 +3,6 @@
 Transformaciones entre **modelos de color** con **C++ + GTK+ 3**, pensadas para cursos de *Procesamiento de Imágenes / Machine Learning*.
 La app muestra, para cada selección, el **pipeline completo Origen → Intermedios → Destino** y permite escoger cómo visualizar cada canal (**Gris / Tintado / Pseudocolor**).
 
-https://github.com/<tu-usuario>/ColorTransformsGTK_v2
 
 > **Resumen**
 > - Panel izquierdo: cargar imagen, vista previa, selector de transformación, **modo de visualización por canal**.
