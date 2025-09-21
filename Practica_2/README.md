@@ -156,7 +156,7 @@ ColorTransformsGTK_v2/
 <img width="1908" height="1031" alt="image" src="https://github.com/user-attachments/assets/2945465e-d9df-4902-a7ea-386f474f06b2" />
 
 ### Transformación YIQ -> RGB
-<img width="1908" height="1031" alt="image" src="https://github.com/user-attachments/assets/f2c312a8-5c9d-424a-b1c0-5db3f80acd74" />
+<img width="1908" height="1031" alt="image" src="https://github.com/user-attachments/assets/5e28339c-21ea-4d47-bda2-2e285f0438fb" />
 
 ### Transformación RGB -> HSI
 <img width="1908" height="1031" alt="image" src="https://github.com/user-attachments/assets/129de63c-24c9-47ca-a626-4903a171af0e" />
