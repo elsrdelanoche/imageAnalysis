@@ -162,7 +162,7 @@ ColorTransformsGTK_v2/
 <img width="1908" height="1031" alt="image" src="https://github.com/user-attachments/assets/129de63c-24c9-47ca-a626-4903a171af0e" />
 
 ### Transformación HSI -> RGB
-<img width="1908" height="1031" alt="image" src="https://github.com/user-attachments/assets/b6c6aad6-49e4-4e82-a288-d986f6fa4e74" />
+<img width="1908" height="1031" alt="image" src="https://github.com/user-attachments/assets/2326c6af-dcfd-4064-ae40-8abf31eabd9c" />
 
 ### Transformación RGB -> HSV
 <img width="1908" height="1031" alt="image" src="https://github.com/user-attachments/assets/1118f94e-41ce-4eed-baea-02b4ddc386e9" />
