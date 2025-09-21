@@ -1,4 +1,4 @@
-# Install script for directory: /home/alfredo/Documents/ColorTransformsGTK_v2
+# Install script for directory: /home/alfredo/Downloads/Practica_2_no_steps_fix
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,7 +45,7 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/alfredo/Documents/ColorTransformsGTK_v2/build/install_local_manifest.txt"
+  file(WRITE "/home/alfredo/Downloads/Practica_2_no_steps_fix/build/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -61,6 +61,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/alfredo/Documents/ColorTransformsGTK_v2/build/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "/home/alfredo/Downloads/Practica_2_no_steps_fix/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

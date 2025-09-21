@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/alfredo/Documents/ColorTransformsGTK_v2
+CMAKE_SOURCE_DIR = /home/alfredo/Downloads/Practica_2_no_steps_fix
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/alfredo/Documents/ColorTransformsGTK_v2/build
+CMAKE_BINARY_DIR = /home/alfredo/Downloads/Practica_2_no_steps_fix/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/coltrans.dir/depend.make
@@ -73,60 +73,60 @@ CMakeFiles/coltrans.dir/codegen:
 .PHONY : CMakeFiles/coltrans.dir/codegen
 
 CMakeFiles/coltrans.dir/src/main.cpp.o: CMakeFiles/coltrans.dir/flags.make
-CMakeFiles/coltrans.dir/src/main.cpp.o: /home/alfredo/Documents/ColorTransformsGTK_v2/src/main.cpp
+CMakeFiles/coltrans.dir/src/main.cpp.o: /home/alfredo/Downloads/Practica_2_no_steps_fix/src/main.cpp
 CMakeFiles/coltrans.dir/src/main.cpp.o: CMakeFiles/coltrans.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alfredo/Documents/ColorTransformsGTK_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/coltrans.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/coltrans.dir/src/main.cpp.o -MF CMakeFiles/coltrans.dir/src/main.cpp.o.d -o CMakeFiles/coltrans.dir/src/main.cpp.o -c /home/alfredo/Documents/ColorTransformsGTK_v2/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alfredo/Downloads/Practica_2_no_steps_fix/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/coltrans.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/coltrans.dir/src/main.cpp.o -MF CMakeFiles/coltrans.dir/src/main.cpp.o.d -o CMakeFiles/coltrans.dir/src/main.cpp.o -c /home/alfredo/Downloads/Practica_2_no_steps_fix/src/main.cpp
 
 CMakeFiles/coltrans.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/coltrans.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alfredo/Documents/ColorTransformsGTK_v2/src/main.cpp > CMakeFiles/coltrans.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alfredo/Downloads/Practica_2_no_steps_fix/src/main.cpp > CMakeFiles/coltrans.dir/src/main.cpp.i
 
 CMakeFiles/coltrans.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/coltrans.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alfredo/Documents/ColorTransformsGTK_v2/src/main.cpp -o CMakeFiles/coltrans.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alfredo/Downloads/Practica_2_no_steps_fix/src/main.cpp -o CMakeFiles/coltrans.dir/src/main.cpp.s
 
 CMakeFiles/coltrans.dir/src/ui.cpp.o: CMakeFiles/coltrans.dir/flags.make
-CMakeFiles/coltrans.dir/src/ui.cpp.o: /home/alfredo/Documents/ColorTransformsGTK_v2/src/ui.cpp
+CMakeFiles/coltrans.dir/src/ui.cpp.o: /home/alfredo/Downloads/Practica_2_no_steps_fix/src/ui.cpp
 CMakeFiles/coltrans.dir/src/ui.cpp.o: CMakeFiles/coltrans.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alfredo/Documents/ColorTransformsGTK_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/coltrans.dir/src/ui.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/coltrans.dir/src/ui.cpp.o -MF CMakeFiles/coltrans.dir/src/ui.cpp.o.d -o CMakeFiles/coltrans.dir/src/ui.cpp.o -c /home/alfredo/Documents/ColorTransformsGTK_v2/src/ui.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alfredo/Downloads/Practica_2_no_steps_fix/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/coltrans.dir/src/ui.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/coltrans.dir/src/ui.cpp.o -MF CMakeFiles/coltrans.dir/src/ui.cpp.o.d -o CMakeFiles/coltrans.dir/src/ui.cpp.o -c /home/alfredo/Downloads/Practica_2_no_steps_fix/src/ui.cpp
 
 CMakeFiles/coltrans.dir/src/ui.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/coltrans.dir/src/ui.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alfredo/Documents/ColorTransformsGTK_v2/src/ui.cpp > CMakeFiles/coltrans.dir/src/ui.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alfredo/Downloads/Practica_2_no_steps_fix/src/ui.cpp > CMakeFiles/coltrans.dir/src/ui.cpp.i
 
 CMakeFiles/coltrans.dir/src/ui.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/coltrans.dir/src/ui.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alfredo/Documents/ColorTransformsGTK_v2/src/ui.cpp -o CMakeFiles/coltrans.dir/src/ui.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alfredo/Downloads/Practica_2_no_steps_fix/src/ui.cpp -o CMakeFiles/coltrans.dir/src/ui.cpp.s
 
 CMakeFiles/coltrans.dir/src/transform.cpp.o: CMakeFiles/coltrans.dir/flags.make
-CMakeFiles/coltrans.dir/src/transform.cpp.o: /home/alfredo/Documents/ColorTransformsGTK_v2/src/transform.cpp
+CMakeFiles/coltrans.dir/src/transform.cpp.o: /home/alfredo/Downloads/Practica_2_no_steps_fix/src/transform.cpp
 CMakeFiles/coltrans.dir/src/transform.cpp.o: CMakeFiles/coltrans.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alfredo/Documents/ColorTransformsGTK_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/coltrans.dir/src/transform.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/coltrans.dir/src/transform.cpp.o -MF CMakeFiles/coltrans.dir/src/transform.cpp.o.d -o CMakeFiles/coltrans.dir/src/transform.cpp.o -c /home/alfredo/Documents/ColorTransformsGTK_v2/src/transform.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alfredo/Downloads/Practica_2_no_steps_fix/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/coltrans.dir/src/transform.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/coltrans.dir/src/transform.cpp.o -MF CMakeFiles/coltrans.dir/src/transform.cpp.o.d -o CMakeFiles/coltrans.dir/src/transform.cpp.o -c /home/alfredo/Downloads/Practica_2_no_steps_fix/src/transform.cpp
 
 CMakeFiles/coltrans.dir/src/transform.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/coltrans.dir/src/transform.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alfredo/Documents/ColorTransformsGTK_v2/src/transform.cpp > CMakeFiles/coltrans.dir/src/transform.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alfredo/Downloads/Practica_2_no_steps_fix/src/transform.cpp > CMakeFiles/coltrans.dir/src/transform.cpp.i
 
 CMakeFiles/coltrans.dir/src/transform.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/coltrans.dir/src/transform.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alfredo/Documents/ColorTransformsGTK_v2/src/transform.cpp -o CMakeFiles/coltrans.dir/src/transform.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alfredo/Downloads/Practica_2_no_steps_fix/src/transform.cpp -o CMakeFiles/coltrans.dir/src/transform.cpp.s
 
 CMakeFiles/coltrans.dir/src/image_utils.cpp.o: CMakeFiles/coltrans.dir/flags.make
-CMakeFiles/coltrans.dir/src/image_utils.cpp.o: /home/alfredo/Documents/ColorTransformsGTK_v2/src/image_utils.cpp
+CMakeFiles/coltrans.dir/src/image_utils.cpp.o: /home/alfredo/Downloads/Practica_2_no_steps_fix/src/image_utils.cpp
 CMakeFiles/coltrans.dir/src/image_utils.cpp.o: CMakeFiles/coltrans.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alfredo/Documents/ColorTransformsGTK_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/coltrans.dir/src/image_utils.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/coltrans.dir/src/image_utils.cpp.o -MF CMakeFiles/coltrans.dir/src/image_utils.cpp.o.d -o CMakeFiles/coltrans.dir/src/image_utils.cpp.o -c /home/alfredo/Documents/ColorTransformsGTK_v2/src/image_utils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alfredo/Downloads/Practica_2_no_steps_fix/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/coltrans.dir/src/image_utils.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/coltrans.dir/src/image_utils.cpp.o -MF CMakeFiles/coltrans.dir/src/image_utils.cpp.o.d -o CMakeFiles/coltrans.dir/src/image_utils.cpp.o -c /home/alfredo/Downloads/Practica_2_no_steps_fix/src/image_utils.cpp
 
 CMakeFiles/coltrans.dir/src/image_utils.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/coltrans.dir/src/image_utils.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alfredo/Documents/ColorTransformsGTK_v2/src/image_utils.cpp > CMakeFiles/coltrans.dir/src/image_utils.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alfredo/Downloads/Practica_2_no_steps_fix/src/image_utils.cpp > CMakeFiles/coltrans.dir/src/image_utils.cpp.i
 
 CMakeFiles/coltrans.dir/src/image_utils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/coltrans.dir/src/image_utils.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alfredo/Documents/ColorTransformsGTK_v2/src/image_utils.cpp -o CMakeFiles/coltrans.dir/src/image_utils.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alfredo/Downloads/Practica_2_no_steps_fix/src/image_utils.cpp -o CMakeFiles/coltrans.dir/src/image_utils.cpp.s
 
 # Object files for target coltrans
 coltrans_OBJECTS = \
@@ -145,7 +145,7 @@ coltrans: CMakeFiles/coltrans.dir/src/image_utils.cpp.o
 coltrans: CMakeFiles/coltrans.dir/build.make
 coltrans: CMakeFiles/coltrans.dir/compiler_depend.ts
 coltrans: CMakeFiles/coltrans.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/alfredo/Documents/ColorTransformsGTK_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable coltrans"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/alfredo/Downloads/Practica_2_no_steps_fix/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable coltrans"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/coltrans.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -157,6 +157,6 @@ CMakeFiles/coltrans.dir/clean:
 .PHONY : CMakeFiles/coltrans.dir/clean
 
 CMakeFiles/coltrans.dir/depend:
-	cd /home/alfredo/Documents/ColorTransformsGTK_v2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alfredo/Documents/ColorTransformsGTK_v2 /home/alfredo/Documents/ColorTransformsGTK_v2 /home/alfredo/Documents/ColorTransformsGTK_v2/build /home/alfredo/Documents/ColorTransformsGTK_v2/build /home/alfredo/Documents/ColorTransformsGTK_v2/build/CMakeFiles/coltrans.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/alfredo/Downloads/Practica_2_no_steps_fix/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alfredo/Downloads/Practica_2_no_steps_fix /home/alfredo/Downloads/Practica_2_no_steps_fix /home/alfredo/Downloads/Practica_2_no_steps_fix/build /home/alfredo/Downloads/Practica_2_no_steps_fix/build /home/alfredo/Downloads/Practica_2_no_steps_fix/build/CMakeFiles/coltrans.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/coltrans.dir/depend
 

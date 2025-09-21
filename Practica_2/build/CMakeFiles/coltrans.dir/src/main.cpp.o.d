@@ -1,5 +1,5 @@
 CMakeFiles/coltrans.dir/src/main.cpp.o: \
- /home/alfredo/Documents/ColorTransformsGTK_v2/src/main.cpp \
+ /home/alfredo/Downloads/Practica_2_no_steps_fix/src/main.cpp \
  /usr/include/stdc-predef.h /usr/include/gtk-3.0/gtk/gtk.h \
  /usr/include/gtk-3.0/gdk/gdk.h /usr/include/gtk-3.0/gdk/gdkconfig.h \
  /usr/include/glib-2.0/glib.h /usr/include/glib-2.0/glib/galloca.h \
@@ -706,4 +706,4 @@ CMakeFiles/coltrans.dir/src/main.cpp.o: \
  /usr/include/gtk-3.0/gtk/deprecated/gtkvscrollbar.h \
  /usr/include/gtk-3.0/gtk/deprecated/gtkvseparator.h \
  /usr/include/gtk-3.0/gtk/gtk-autocleanups.h \
- /home/alfredo/Documents/ColorTransformsGTK_v2/src/ui.hpp
+ /home/alfredo/Downloads/Practica_2_no_steps_fix/src/ui.hpp

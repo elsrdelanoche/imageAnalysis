@@ -6,6 +6,10 @@
 #include <cmath>
 #include <algorithm>
 
+static void on_export_cmy_clicked(GtkButton *btn, gpointer user_data);
+static GdkPixbuf* cmy_planes_to_pixbuf(const ImageCMY &cmy);
+static GdkPixbuf* make_dest_pixbuf(TransformType t, const ImageRGB &src_rgb);
+
 typedef struct {
     GtkWidget *window;
     GtkWidget *combo;
@@ -14,6 +18,9 @@ typedef struct {
     GtkWidget *orig_image;
     GtkWidget *steps_view;
     GtkWidget *channels_scroller;
+    GtkWidget *cmy_image;
+    GtkWidget *btn_export_cmy;
+    GdkPixbuf *cmy_pixbuf;
     GtkWidget *channels_box; // vbox with sections
     GdkPixbuf *loaded_pixbuf;
     GdkPixbuf *preview_pixbuf;
@@ -124,6 +131,8 @@ static GtkWidget* make_channel_tile(AppState* st, const char* caption, const Ima
 }
 
 static void fill_steps_text(AppState* st, TransformType t){
+    if (!st->steps_view) return;
+
     GtkTextBuffer* buf = gtk_text_view_get_buffer(GTK_TEXT_VIEW(st->steps_view));
     gtk_text_buffer_set_text(buf, "", -1);
     const char* txt = "";
@@ -209,7 +218,7 @@ static void fill_steps_text(AppState* st, TransformType t){
 
 static void on_transform_changed(GtkComboBox *combo, gpointer user_data) {
     AppState *st = (AppState*)user_data;
-    fill_steps_text(st, (TransformType)gtk_combo_box_get_active(GTK_COMBO_BOX(st->combo)));
+    // fill_steps_text removed
     render_channels(st);
 }
 
@@ -238,10 +247,87 @@ static void on_channels_size_allocate(GtkWidget* widget, GdkRectangle* alloc, gp
         render_channels(st);
     }
 }
+static GdkPixbuf* cmy_planes_to_pixbuf(const ImageCMY &cmy){
+    ImageRGB tmp;
+    tmp.width = cmy.width; tmp.height = cmy.height;
+    tmp.r = cmy.c; tmp.g = cmy.m; tmp.b = cmy.y;
+    return rgb_to_pixbuf(tmp);
+}
 
-static void render_channels(AppState *st) {
+
+
+
+static GdkPixbuf* make_dest_pixbuf(TransformType t, const ImageRGB &src_rgb){
+    // Pack destination channels into R,G,B for visualization/export.
+    ImageRGB pack; pack.width = src_rgb.width; pack.height = src_rgb.height;
+    switch (t){
+        case TRANS_RGB_TO_CMY: {
+            ImageCMY c = rgb_to_cmy(src_rgb);
+            pack.r = c.c; pack.g = c.m; pack.b = c.y;
+            return rgb_to_pixbuf(pack);
+        }
+        case TRANS_CMY_TO_RGB: {
+            ImageCMY c = rgb_to_cmy(src_rgb);
+            ImageRGB out = cmy_to_rgb(c);
+            pack.r = out.r; pack.g = out.g; pack.b = out.b;
+            return rgb_to_pixbuf(pack);
+        }
+        case TRANS_CMY_TO_CMYK: {
+            ImageCMY c = rgb_to_cmy(src_rgb);
+            ImageCMYK k = cmy_to_cmyk(c);
+            pack.r = k.c; pack.g = k.m; pack.b = k.y; // K no cabe en 3 canales
+            return rgb_to_pixbuf(pack);
+        }
+        case TRANS_CMYK_TO_CMY: {
+            ImageCMY c = rgb_to_cmy(src_rgb);
+            ImageCMYK k = cmy_to_cmyk(c);
+            ImageCMY c2 = cmyk_to_cmy(k);
+            pack.r = c2.c; pack.g = c2.m; pack.b = c2.y;
+            return rgb_to_pixbuf(pack);
+        }
+        case TRANS_RGB_TO_YIQ: {
+            ImageYIQ q = rgb_to_yiq(src_rgb);
+            pack.r = q.y; pack.g = q.i; pack.b = q.q;
+            return rgb_to_pixbuf(pack);
+        }
+        case TRANS_YIQ_TO_RGB: {
+            ImageYIQ q = rgb_to_yiq(src_rgb);
+            ImageRGB out = yiq_to_rgb(q);
+            pack.r = out.r; pack.g = out.g; pack.b = out.b;
+            return rgb_to_pixbuf(pack);
+        }
+        case TRANS_RGB_TO_HSI: {
+            ImageHSI h = rgb_to_hsi(src_rgb);
+            pack.r = h.h; pack.g = h.s; pack.b = h.i;
+            return rgb_to_pixbuf(pack);
+        }
+        case TRANS_HSI_TO_RGB: {
+            ImageHSI h = rgb_to_hsi(src_rgb);
+            ImageRGB out = hsi_to_rgb(h);
+            pack.r = out.r; pack.g = out.g; pack.b = out.b;
+            return rgb_to_pixbuf(pack);
+        }
+        case TRANS_RGB_TO_HSV: {
+            ImageHSV v = rgb_to_hsv(src_rgb);
+            pack.r = v.h; pack.g = v.s; pack.b = v.v;
+            return rgb_to_pixbuf(pack);
+        }
+        case TRANS_HSV_TO_RGB: {
+            ImageHSV v = rgb_to_hsv(src_rgb);
+            ImageRGB out = hsv_to_rgb(v);
+            pack.r = out.r; pack.g = out.g; pack.b = out.b;
+            return rgb_to_pixbuf(pack);
+        }
+        default: break;
+    }
+    return NULL;
+}
+void render_channels(AppState *st) {
     if (!st->loaded_pixbuf) return;
     clear_children(st->channels_box);
+    // Reset CMY preview unless this is the CMY transform; will re-enable below
+    if (st->btn_export_cmy) gtk_widget_set_sensitive(st->btn_export_cmy, FALSE);
+    if (st->cmy_image) gtk_image_clear(GTK_IMAGE(st->cmy_image));
 
     // Selected transform
     TransformType t = (TransformType)gtk_combo_box_get_active(GTK_COMBO_BOX(st->combo));
@@ -291,7 +377,8 @@ static void render_channels(AppState *st) {
         tiles_d.push_back(make_channel_tile(st, "C (destino)", cmy.c, false));
         tiles_d.push_back(make_channel_tile(st, "M (destino)", cmy.m, false));
         tiles_d.push_back(make_channel_tile(st, "Y (destino)", cmy.y, false));
-    } else if (t == TRANS_CMY_TO_RGB) {
+    }
+else if (t == TRANS_CMY_TO_RGB) {
         ImageCMY cmy = rgb_to_cmy(rgb);
         ImageRGB out = cmy_to_rgb(cmy);
         tiles_o.push_back(make_channel_tile(st, "C (origen)", cmy.c, false));
@@ -383,7 +470,19 @@ static void render_channels(AppState *st) {
         tiles_d.push_back(make_channel_tile(st, "B (destino)", out.b, false));
     }
 
-    if (!tiles_o.empty()){ pack(grid_o, tiles_o); gtk_box_pack_start(GTK_BOX(st->channels_box), sec_origin, FALSE, FALSE, 2); gtk_box_pack_start(GTK_BOX(sec_origin), grid_o, FALSE, FALSE, 0); }
+    
+    // Combined destination preview
+    if (st->cmy_image){
+        if (st->cmy_pixbuf) { g_object_unref(st->cmy_pixbuf); st->cmy_pixbuf = NULL; }
+        st->cmy_pixbuf = make_dest_pixbuf(t, rgb);
+        if (st->cmy_pixbuf){
+            GdkPixbuf *scaled = scale_pixbuf_fit(st->cmy_pixbuf, 260, 260);
+            if (scaled){ gtk_image_set_from_pixbuf(GTK_IMAGE(st->cmy_image), scaled); g_object_unref(scaled); }
+            else { gtk_image_set_from_pixbuf(GTK_IMAGE(st->cmy_image), st->cmy_pixbuf); }
+            if (st->btn_export_cmy) gtk_widget_set_sensitive(st->btn_export_cmy, TRUE);
+        }
+    }
+if (!tiles_o.empty()){ pack(grid_o, tiles_o); gtk_box_pack_start(GTK_BOX(st->channels_box), sec_origin, FALSE, FALSE, 2); gtk_box_pack_start(GTK_BOX(sec_origin), grid_o, FALSE, FALSE, 0); }
     if (!tiles_m.empty()){ pack(grid_m, tiles_m); gtk_box_pack_start(GTK_BOX(st->channels_box), sec_mid, FALSE, FALSE, 2); gtk_box_pack_start(GTK_BOX(sec_mid), grid_m, FALSE, FALSE, 0); }
     if (!tiles_d.empty()){ pack(grid_d, tiles_d); gtk_box_pack_start(GTK_BOX(st->channels_box), sec_dest, FALSE, FALSE, 2); gtk_box_pack_start(GTK_BOX(sec_dest), grid_d, FALSE, FALSE, 0); }
 
@@ -429,7 +528,11 @@ void on_app_activate(GtkApplication *app, gpointer user_data) {
     AppState *st = g_new0(AppState, 1);
 
     st->window = gtk_application_window_new(app);
-    gtk_window_set_title(GTK_WINDOW(st->window), "Transformaciones de Color");
+    gtk_window_set_title(GTK_WINDOW(st->window), "Transformaciones | Practica 2");
+    GtkWidget *hb = gtk_header_bar_new();
+    gtk_header_bar_set_title(GTK_HEADER_BAR(hb), "Transformaciones | Practica 2");
+    gtk_header_bar_set_show_close_button(GTK_HEADER_BAR(hb), TRUE);
+    gtk_window_set_titlebar(GTK_WINDOW(st->window), hb);
     gtk_window_set_default_size(GTK_WINDOW(st->window), 1200, 800);
 
     GtkWidget *paned = gtk_paned_new(GTK_ORIENTATION_HORIZONTAL);
@@ -464,13 +567,12 @@ void on_app_activate(GtkApplication *app, gpointer user_data) {
     gtk_combo_box_set_active(GTK_COMBO_BOX(st->mode_combo), 1);
     g_signal_connect(st->mode_combo, "changed", G_CALLBACK(on_mode_changed), st);
 
-    GtkWidget *steps_lbl = gtk_label_new("Acciones / Cálculos:");
-    st->steps_view = gtk_text_view_new();
-    gtk_text_view_set_editable(GTK_TEXT_VIEW(st->steps_view), FALSE);
-    gtk_text_view_set_wrap_mode(GTK_TEXT_VIEW(st->steps_view), GTK_WRAP_WORD_CHAR);
-    GtkWidget *steps_scroll = gtk_scrolled_window_new(NULL, NULL);
-    gtk_widget_set_size_request(steps_scroll, -1, 200);
-    gtk_container_add(GTK_CONTAINER(steps_scroll), st->steps_view);
+    /* steps removed */
+    /* steps removed */
+    
+    
+    /* steps removed */
+    
 
     gtk_box_pack_start(GTK_BOX(left), btn_open, FALSE, FALSE, 0);
     gtk_box_pack_start(GTK_BOX(left), st->file_label, FALSE, FALSE, 0);
@@ -480,8 +582,24 @@ void on_app_activate(GtkApplication *app, gpointer user_data) {
     gtk_box_pack_start(GTK_BOX(left), st->combo, FALSE, FALSE, 0);
     gtk_box_pack_start(GTK_BOX(left), mode_lbl, FALSE, FALSE, 0);
     gtk_box_pack_start(GTK_BOX(left), st->mode_combo, FALSE, FALSE, 0);
-    gtk_box_pack_start(GTK_BOX(left), steps_lbl, FALSE, FALSE, 0);
-    gtk_box_pack_start(GTK_BOX(left), steps_scroll, TRUE, TRUE, 0);
+    /* steps removed */
+    /* steps removed */
+
+
+// CMY combinado (solo visible en RGB -> CMY)
+GtkWidget *cmy_lbl = gtk_label_new("Combinado (destino):");
+gtk_box_pack_start(GTK_BOX(left), cmy_lbl, FALSE, FALSE, 0);
+
+st->cmy_image = gtk_image_new();
+gtk_widget_set_hexpand(st->cmy_image, FALSE);
+    gtk_widget_set_vexpand(st->cmy_image, FALSE);
+    gtk_box_pack_start(GTK_BOX(left), st->cmy_image, FALSE, FALSE, 0);
+
+st->btn_export_cmy = gtk_button_new_with_label("Exportar combinado…");
+gtk_widget_set_sensitive(st->btn_export_cmy, FALSE);
+g_signal_connect(st->btn_export_cmy, "clicked", G_CALLBACK(on_export_cmy_clicked), st);
+gtk_box_pack_start(GTK_BOX(left), st->btn_export_cmy, FALSE, FALSE, 0);
+
 
     // Right panel: scrolled box of sections
     st->channels_box = gtk_box_new(GTK_ORIENTATION_VERTICAL, 10);
@@ -501,5 +619,80 @@ void on_app_activate(GtkApplication *app, gpointer user_data) {
 
     gtk_widget_show_all(st->window);
     // Fill steps text initially
-    fill_steps_text(st, (TransformType)gtk_combo_box_get_active(GTK_COMBO_BOX(st->combo)));
+    // fill_steps_text removed
+}
+
+
+
+static const char* ext_to_type(const char *ext){
+    if (!ext) return "png";
+    if (!g_ascii_strcasecmp(ext, ".png")) return "png";
+    if (!g_ascii_strcasecmp(ext, ".jpg") || !g_ascii_strcasecmp(ext, ".jpeg")) return "jpeg";
+    if (!g_ascii_strcasecmp(ext, ".bmp")) return "bmp";
+    if (!g_ascii_strcasecmp(ext, ".tif") || !g_ascii_strcasecmp(ext, ".tiff")) return "tiff";
+    return "png";
+}
+
+static void on_export_cmy_clicked(GtkButton *btn, gpointer user_data){
+    AppState *st = (AppState*)user_data;
+    if (!st || !st->cmy_pixbuf) return;
+
+    const char *orig = st->filename.empty() ? "imagen" : st->filename.c_str();
+    gchar *base = g_path_get_basename(orig);
+    gchar *name_noext = g_strdup(base);
+    gchar *dot = g_strrstr(name_noext, ".");
+    const char *ext = ".png";
+    if (dot){ *dot = '\0'; ext = g_path_get_dirname(base); /* temp misuse */ }
+    // Actually get extension properly
+    const char *orig_ext = NULL;
+    gchar *extp = g_strrstr(base, ".");
+    if (extp) orig_ext = extp;
+
+    gchar *suggest = g_strdup_printf("%s_CMY%s", name_noext, extp ? extp : ".png");
+
+#if GTK_CHECK_VERSION(3,20,0)
+    GtkFileChooserNative *native = gtk_file_chooser_native_new("Exportar CMY",
+        GTK_WINDOW(st->window), GTK_FILE_CHOOSER_ACTION_SAVE,
+        "_Guardar", "_Cancelar");
+    GtkFileChooser *chooser = GTK_FILE_CHOOSER(native);
+#else
+    GtkWidget *dialog = gtk_file_chooser_dialog_new("Exportar CMY",
+        GTK_WINDOW(st->window), GTK_FILE_CHOOSER_ACTION_SAVE,
+        "_Cancelar", GTK_RESPONSE_CANCEL,
+        "_Guardar", GTK_RESPONSE_ACCEPT, NULL);
+    GtkFileChooser *chooser = GTK_FILE_CHOOSER(dialog);
+#endif
+
+    gtk_file_chooser_set_current_name(chooser, suggest);
+
+    gboolean ok = FALSE;
+#if GTK_CHECK_VERSION(3,20,0)
+    if (gtk_native_dialog_run(GTK_NATIVE_DIALOG(native)) == GTK_RESPONSE_ACCEPT){
+        gchar *outfn = gtk_file_chooser_get_filename(chooser);
+        const char *type = ext_to_type(g_strrstr(outfn, "."));
+        GError *err = NULL;
+        if (!gdk_pixbuf_save(st->cmy_pixbuf, outfn, type, &err, NULL)){
+            g_printerr("Error exportando: %s\n", err?err->message:"desconocido");
+            if (err) g_error_free(err);
+        }
+        g_free(outfn);
+    }
+    g_object_unref(native);
+#else
+    if (gtk_dialog_run(GTK_DIALOG(dialog)) == GTK_RESPONSE_ACCEPT){
+        gchar *outfn = gtk_file_chooser_get_filename(chooser);
+        const char *type = ext_to_type(g_strrstr(outfn, "."));
+        GError *err = NULL;
+        if (!gdk_pixbuf_save(st->cmy_pixbuf, outfn, type, &err, NULL)){
+            g_printerr("Error exportando: %s\n", err?err->message:"desconocido");
+            if (err) g_error_free(err);
+        }
+        g_free(outfn);
+    }
+    gtk_widget_destroy(dialog);
+#endif
+
+    g_free(base);
+    g_free(name_noext);
+    g_free(suggest);
 }

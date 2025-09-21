@@ -1,7 +1,7 @@
 CMakeFiles/coltrans.dir/src/image_utils.cpp.o: \
- /home/alfredo/Documents/ColorTransformsGTK_v2/src/image_utils.cpp \
+ /home/alfredo/Downloads/Practica_2_no_steps_fix/src/image_utils.cpp \
  /usr/include/stdc-predef.h \
- /home/alfredo/Documents/ColorTransformsGTK_v2/src/image_utils.hpp \
+ /home/alfredo/Downloads/Practica_2_no_steps_fix/src/image_utils.hpp \
  /usr/include/gtk-3.0/gtk/gtk.h /usr/include/gtk-3.0/gdk/gdk.h \
  /usr/include/gtk-3.0/gdk/gdkconfig.h /usr/include/glib-2.0/glib.h \
  /usr/include/glib-2.0/glib/galloca.h /usr/include/glib-2.0/glib/gtypes.h \

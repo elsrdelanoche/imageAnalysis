@@ -1,7 +1,7 @@
 CMakeFiles/coltrans.dir/src/ui.cpp.o: \
- /home/alfredo/Documents/ColorTransformsGTK_v2/src/ui.cpp \
+ /home/alfredo/Downloads/Practica_2_no_steps_fix/src/ui.cpp \
  /usr/include/stdc-predef.h \
- /home/alfredo/Documents/ColorTransformsGTK_v2/src/ui.hpp \
+ /home/alfredo/Downloads/Practica_2_no_steps_fix/src/ui.hpp \
  /usr/include/gtk-3.0/gtk/gtk.h /usr/include/gtk-3.0/gdk/gdk.h \
  /usr/include/gtk-3.0/gdk/gdkconfig.h /usr/include/glib-2.0/glib.h \
  /usr/include/glib-2.0/glib/galloca.h /usr/include/glib-2.0/glib/gtypes.h \
@@ -707,7 +707,7 @@ CMakeFiles/coltrans.dir/src/ui.cpp.o: \
  /usr/include/gtk-3.0/gtk/deprecated/gtkvscrollbar.h \
  /usr/include/gtk-3.0/gtk/deprecated/gtkvseparator.h \
  /usr/include/gtk-3.0/gtk/gtk-autocleanups.h \
- /home/alfredo/Documents/ColorTransformsGTK_v2/src/image_utils.hpp \
+ /home/alfredo/Downloads/Practica_2_no_steps_fix/src/image_utils.hpp \
  /usr/include/c++/15.2.1/vector \
  /usr/include/c++/15.2.1/bits/requires_hosted.h \
  /usr/include/c++/15.2.1/bits/stl_algobase.h \
@@ -753,7 +753,7 @@ CMakeFiles/coltrans.dir/src/ui.cpp.o: \
  /usr/include/c++/15.2.1/bits/uses_allocator.h \
  /usr/include/c++/15.2.1/bits/uses_allocator_args.h \
  /usr/include/c++/15.2.1/tuple \
- /home/alfredo/Documents/ColorTransformsGTK_v2/src/transform.hpp \
+ /home/alfredo/Downloads/Practica_2_no_steps_fix/src/transform.hpp \
  /usr/include/c++/15.2.1/string /usr/include/c++/15.2.1/bits/stringfwd.h \
  /usr/include/c++/15.2.1/bits/char_traits.h \
  /usr/include/c++/15.2.1/bits/postypes.h /usr/include/c++/15.2.1/cwchar \

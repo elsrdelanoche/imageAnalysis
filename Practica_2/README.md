@@ -6,7 +6,7 @@ La app muestra, para cada selección, el **pipeline completo Origen → Intermed
 https://github.com/<tu-usuario>/ColorTransformsGTK_v2
 
 > **Resumen**
-> - Panel izquierdo: cargar imagen, vista previa, selector de transformación, **modo de visualización por canal**, y panel **Acciones / Cálculos** con fórmulas.
+> - Panel izquierdo: cargar imagen, vista previa, selector de transformación, **modo de visualización por canal**.
 > - Panel derecho: grillas adaptativas con los canales del **origen**, **intermedios** y **destino**, cada uno con su **pie de imagen**.
 
 ---
@@ -24,11 +24,9 @@ https://github.com/<tu-usuario>/ColorTransformsGTK_v2
   8. HSI → RGB
   9. RGB → HSV
   10. HSV → RGB
-- **Visualización por canal**:
-  - **Gris**: intensidad 0–255 del plano.
+- **Visualización por canal** (de momento, solo se mostrará *Tintado*):
   - **Tintado**: R/G/B en rojo/verde/azul; C/M/Y en cian/magenta/amarillo; K en gris.
-  - **Pseudocolor**: mapa simple azul→cian→verde→amarillo→rojo.
-  - **Hue (H)**: se renderiza a color real (HSV con S=V=1) o en pseudocolor, según el modo.
+
 - **UI adaptativa**: miniaturas uniformes; el grid calcula columnas según el ancho.
 - **Pipeline completo**: además del destino, se muestran **intermedios útiles** (p.ej., Cmax/Cmin/Δ en HSV; min(R,G,B) en HSI).
 - **Arquitectura ligera tipo MVC**:
@@ -70,7 +68,7 @@ make -j$(nproc)
 
 1. **Cargar imagen** (PNG/JPG, RGB 8 bits).
 2. Elegir la **transformación** en el combo.
-3. Escoger **modo de visualización por canal**: *Gris / Tintado / Pseudocolor*.
+3. Escoger **modo de visualización por canal** (de momento, solo *Tintado*).
 4. Explorar el panel derecho: secciones **Origen**, **Intermedios**, **Destino**, con pies de imagen.
 
 Sugerencia: cambia el tamaño de la ventana; el grid se refluye para mantener miniaturas uniformes.
@@ -95,15 +93,15 @@ Todos los valores trabajan normalizados en `[0,1]`. Donde aplica, se recortan a 
 
 ### RGB ↔ YIQ
 - **RGB → YIQ**:
-  \[ Y, I, Q \]^T = 
-  \[\[0.299, 0.587, 0.114],
-    [0.596, -0.274, -0.322],
-    [0.211, -0.523, 0.312]\] * \[R, G, B\]^T
+  [ Y, I, Q ]^T = 
+  [[0.299, 0.587, 0.114],
+   [0.596, -0.274, -0.322],
+   [0.211, -0.523, 0.312]] * [R, G, B]^T
 - **YIQ → RGB**:
-  \[ R, G, B \]^T = 
-  \[\[1.0, 0.956, 0.621],
-    [1.0, -0.272, -0.647],
-    [1.0, -1.106, 1.703]\] * \[Y, I, Q\]^T
+  [ R, G, B ]^T = 
+  [[1.0, 0.956, 0.621],
+   [1.0, -0.272, -0.647],
+   [1.0, -1.106, 1.703]] * [Y, I, Q]^T
   - **Recortar** R,G,B a `[0,1]`
 
 ### RGB ↔ HSI
@@ -147,29 +145,22 @@ ColorTransformsGTK_v2/
 
 ---
 
-## 📝 Notas técnicas
-
-- **Representación:** en pantalla, bytes **0x00RRGGBB** (8 bits por canal). Internamente, floats `[0,1]` para las fórmulas.
-- **Clamping:** tras YIQ→RGB (y otras), recorte a `[0,1]` antes de convertir a 8 bits.
-- **Hue:** se colorea con HSV `(S=1,V=1)` por defecto (más informativo que gris). Si eliges *Pseudocolor*, aplica el mapa sintético.
-- **Miniaturas:** no se hace *upscale* de imágenes pequeñas (se respeta la resolución).
-
----
-
 ## 🐛 Problemas conocidos
 
-- Pseudocolor: el mapa es básico. Se puede cambiar por **viridis/turbo/jet**.
-- Y/I/Q se muestran en gris; se puede añadir una codificación divergente para `I` y `Q`.
-- Falta tooltip de inspección por píxel (valor 0–255 y **hex 0xRRGGBB**).
+- Actualmente solo está implementada la visualización *Tintado*.
+- Pseudocolor básico pendiente de mejorar.
+- Y/I/Q se muestran en gris; falta codificación divergente más informativa.
+- No hay tooltip de inspección por píxel (valor 0–255 y hex 0xRRGGBB).
 
 ---
 
 ## 🗺️ Roadmap (ideas)
 
+- Añadir visualización **Gris** y **Pseudocolor**.
 - Tooltip por píxel con `(R,G,B)`, `(H,S,V)`, etc., y 0xRRGGBB.
 - Exportar grillas como *contact sheet* (PNG).
-- Perfiles ICC / gestión de color (si el curso lo requiere).
-- `gtkmm` (C++ API) como alternativa a GTK C.
+- Perfiles ICC / gestión de color.
+- Explorar `gtkmm` (C++ API) como alternativa a GTK C.
 
 ---
 
@@ -187,11 +178,17 @@ MIT © <tu-nombre> — Consulta el archivo `LICENSE`.
 
 ---
 
-## 📸 Capturas (opcional)
+## 📸 Capturas de pantalla
 
-Coloca en `docs/` tus imágenes (no incluidas):
+Coloca tus capturas dentro de:
+
 ```
-docs/
-  screenshot_01.png
-  screenshot_02.png
+docs/screenshots/
+```
+
+Ejemplo en el README:
+
+```markdown
+![Vista RGB → CMY](docs/screenshots/rgb_to_cmy.png)
+![Vista CMY → RGB](docs/screenshots/cmy_to_rgb.png)
 ```
