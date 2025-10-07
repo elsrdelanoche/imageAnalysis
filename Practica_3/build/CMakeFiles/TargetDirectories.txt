@@ -1,0 +1,3 @@
+/home/alfredo/Documents/Practica_Histograma_axes_scroll/build/CMakeFiles/practica_histograma.dir
+/home/alfredo/Documents/Practica_Histograma_axes_scroll/build/CMakeFiles/edit_cache.dir
+/home/alfredo/Documents/Practica_Histograma_axes_scroll/build/CMakeFiles/rebuild_cache.dir
