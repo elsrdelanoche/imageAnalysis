@@ -18,3 +18,7 @@ cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
 cmake --build build -j
 ./build/practica_histograma
 ```
+<img width="1908" height="1023" alt="image" src="https://github.com/user-attachments/assets/bf6f9ed8-0b88-4151-ac3c-20a450576cbb" />
+
+<img width="1908" height="1023" alt="image" src="https://github.com/user-attachments/assets/8adaef75-9c0a-4026-8e98-e346b60b9535" />
+
