@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkBox" id="root_box">
+    <property name="orientation">horizontal</property>
+    <property name="spacing">10</property>
+    <property name="margin">10</property>
+    <child>
+      <object class="GtkBox" id="left_panel">
+        <property name="orientation">vertical</property>
+        <property name="spacing">8</property>
+        <child>
+          <object class="GtkFrame">
+            <property name="label">Archivos</property>
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">vertical</property>
+                <property name="spacing">6</property>
+
+                <child><object class="GtkButton" id="btn_load_a"><property name="label">Cargar A</property></object></child>
+                <child><object class="GtkButton" id="btn_load_b"><property name="label">Cargar B</property></object></child>
+                <child><object class="GtkCheckButton" id="chk_binarize"><property name="label">Forzar binarización (umbral = 128)</property><property name="active">True</property></object></child>
+                <child><object class="GtkSeparator"/></child>
+
+                <child>
+                  <object class="GtkFrame">
+                    <property name="label">Operaciones lógicas</property>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="orientation">vertical</property>
+                        <property name="spacing">4</property>
+                        <child><object class="GtkRadioButton" id="rb_and"><property name="label">AND</property><property name="active">True</property></object></child>
+                        <child><object class="GtkRadioButton" id="rb_or"><property name="label">OR</property><property name="group">rb_and</property></object></child>
+                        <child><object class="GtkRadioButton" id="rb_xor"><property name="label">XOR</property><property name="group">rb_and</property></object></child>
+                        <child>
+                          <object class="GtkBox">
+                            <property name="orientation">horizontal</property>
+                            <property name="spacing">6</property>
+                            <child><object class="GtkCheckButton" id="chk_not_a"><property name="label">NOT A</property></object></child>
+                            <child><object class="GtkCheckButton" id="chk_not_b"><property name="label">NOT B</property></object></child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+
+                <child>
+                  <object class="GtkFrame">
+                    <property name="label">Operaciones relacionales</property>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="orientation">vertical</property>
+                        <property name="spacing">4</property>
+                        <child><object class="GtkRadioButton" id="rb_eq"><property name="label">A == B</property><property name="group">rb_and</property></object></child>
+                        <child><object class="GtkRadioButton" id="rb_ne"><property name="label">A != B</property><property name="group">rb_and</property></object></child>
+                        <child><object class="GtkRadioButton" id="rb_gt"><property name="label">A &gt; B</property><property name="group">rb_and</property></object></child>
+                        <child><object class="GtkRadioButton" id="rb_ge"><property name="label">A &gt;= B</property><property name="group">rb_and</property></object></child>
+                        <child><object class="GtkRadioButton" id="rb_lt"><property name="label">A &lt; B</property><property name="group">rb_and</property></object></child>
+                        <child><object class="GtkRadioButton" id="rb_le"><property name="label">A &lt;= B</property><property name="group">rb_and</property></object></child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+
+                <child><object class="GtkButton" id="btn_apply"><property name="label">Aplicar</property></object></child>
+                <child><object class="GtkButton" id="btn_save"><property name="label">Guardar resultado</property></object></child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+
+    <child><object class="GtkSeparator"><property name="orientation">vertical</property></object></child>
+
+    <child>
+      <object class="GtkBox" id="right_panel">
+        <property name="orientation">vertical</property>
+        <property name="spacing">8</property>
+        <child>
+          <object class="GtkBox">
+            <property name="orientation">horizontal</property>
+            <property name="spacing">8</property>
+            <child><object class="GtkFrame"><property name="label">Imagen A</property><child><object class="GtkImage" id="img_a"/></child></object></child>
+            <child><object class="GtkFrame"><property name="label">Imagen B</property><child><object class="GtkImage" id="img_b"/></child></object></child>
+            <child><object class="GtkFrame"><property name="label">Resultado</property><child><object class="GtkImage" id="img_result"/></child></object></child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
