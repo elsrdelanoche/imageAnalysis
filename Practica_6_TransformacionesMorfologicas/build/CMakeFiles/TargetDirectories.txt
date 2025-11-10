@@ -1,0 +1,3 @@
+/home/alfredo/Documents/imageAnalysis/MorfologiaGTK3_v6/build/CMakeFiles/morph.dir
+/home/alfredo/Documents/imageAnalysis/MorfologiaGTK3_v6/build/CMakeFiles/edit_cache.dir
+/home/alfredo/Documents/imageAnalysis/MorfologiaGTK3_v6/build/CMakeFiles/rebuild_cache.dir

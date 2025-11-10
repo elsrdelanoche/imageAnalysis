@@ -1,0 +1,3 @@
+/home/alfredo/Documents/imageAnalysis/FourierGTK3/build/CMakeFiles/fourier.dir
+/home/alfredo/Documents/imageAnalysis/FourierGTK3/build/CMakeFiles/edit_cache.dir
+/home/alfredo/Documents/imageAnalysis/FourierGTK3/build/CMakeFiles/rebuild_cache.dir
