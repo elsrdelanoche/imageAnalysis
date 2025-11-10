@@ -1,0 +1,13 @@
+build/
+cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+*.cmake
+Makefile
+*.o
+*.so
+ImageTransform
+.vscode/
+.idea/
+*.swp
+.DS_Store
