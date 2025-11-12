@@ -102,12 +102,4 @@ cmake --build . -j"$(nproc)"
 - Visualización auto-escalada (min-max) para derivadas
 - **Reflect padding** (evita bordes oscuros)
 - Kernels configurables en tamaño impar (3 – 31)
-- Soporte para ampliaciones futuras (p. ej., *LoG 9×9* o *DoG*)
-
----
-
-## 🧠 Créditos
-
-Desarrollado por **Henry**  
-Proyecto académico: *Procesamiento Digital de Imágenes – Práctica 3: Convolución, Filtros y Detección de Bordes*  
-Última actualización: **noviembre 2025**
+- Soporte para ampliaciones futuras (p. ej., *LoG 9×9* o *DoG)
