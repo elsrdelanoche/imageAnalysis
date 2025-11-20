@@ -1,0 +1,42 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/herramientas_analisis_imagenes.dir/link.d"
+  "CMakeFiles/herramientas_analisis_imagenes.dir/src/AppController.cpp.o"
+  "CMakeFiles/herramientas_analisis_imagenes.dir/src/AppController.cpp.o.d"
+  "CMakeFiles/herramientas_analisis_imagenes.dir/src/AppWindow.cpp.o"
+  "CMakeFiles/herramientas_analisis_imagenes.dir/src/AppWindow.cpp.o.d"
+  "CMakeFiles/herramientas_analisis_imagenes.dir/src/CanvasArea.cpp.o"
+  "CMakeFiles/herramientas_analisis_imagenes.dir/src/CanvasArea.cpp.o.d"
+  "CMakeFiles/herramientas_analisis_imagenes.dir/src/LeftPanel.cpp.o"
+  "CMakeFiles/herramientas_analisis_imagenes.dir/src/LeftPanel.cpp.o.d"
+  "CMakeFiles/herramientas_analisis_imagenes.dir/src/main.cpp.o"
+  "CMakeFiles/herramientas_analisis_imagenes.dir/src/main.cpp.o.d"
+  "CMakeFiles/herramientas_analisis_imagenes.dir/src/operations.cpp.o"
+  "CMakeFiles/herramientas_analisis_imagenes.dir/src/operations.cpp.o.d"
+  "CMakeFiles/herramientas_analisis_imagenes.dir/src/utils/Canny.cpp.o"
+  "CMakeFiles/herramientas_analisis_imagenes.dir/src/utils/Canny.cpp.o.d"
+  "CMakeFiles/herramientas_analisis_imagenes.dir/src/utils/Convolution.cpp.o"
+  "CMakeFiles/herramientas_analisis_imagenes.dir/src/utils/Convolution.cpp.o.d"
+  "CMakeFiles/herramientas_analisis_imagenes.dir/src/utils/FFT.cpp.o"
+  "CMakeFiles/herramientas_analisis_imagenes.dir/src/utils/FFT.cpp.o.d"
+  "CMakeFiles/herramientas_analisis_imagenes.dir/src/utils/FFTImgUtils.cpp.o"
+  "CMakeFiles/herramientas_analisis_imagenes.dir/src/utils/FFTImgUtils.cpp.o.d"
+  "CMakeFiles/herramientas_analisis_imagenes.dir/src/utils/ImageProcessor.cpp.o"
+  "CMakeFiles/herramientas_analisis_imagenes.dir/src/utils/ImageProcessor.cpp.o.d"
+  "CMakeFiles/herramientas_analisis_imagenes.dir/src/utils/ImgUtils.cpp.o"
+  "CMakeFiles/herramientas_analisis_imagenes.dir/src/utils/ImgUtils.cpp.o.d"
+  "CMakeFiles/herramientas_analisis_imagenes.dir/src/utils/Kernels.cpp.o"
+  "CMakeFiles/herramientas_analisis_imagenes.dir/src/utils/Kernels.cpp.o.d"
+  "CMakeFiles/herramientas_analisis_imagenes.dir/src/utils/MorphOps.cpp.o"
+  "CMakeFiles/herramientas_analisis_imagenes.dir/src/utils/MorphOps.cpp.o.d"
+  "CMakeFiles/herramientas_analisis_imagenes.dir/src/utils/Noise.cpp.o"
+  "CMakeFiles/herramientas_analisis_imagenes.dir/src/utils/Noise.cpp.o.d"
+  "CMakeFiles/herramientas_analisis_imagenes.dir/src/utils/SEFactory.cpp.o"
+  "CMakeFiles/herramientas_analisis_imagenes.dir/src/utils/SEFactory.cpp.o.d"
+  "herramientas_analisis_imagenes"
+  "herramientas_analisis_imagenes.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/herramientas_analisis_imagenes.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

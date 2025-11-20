@@ -1,0 +1,3 @@
+/home/alfredo/Documents/imageAnalysis/Herramientas_Analisis_Imagenes_Integrado_navfix/build/CMakeFiles/herramientas_analisis_imagenes.dir
+/home/alfredo/Documents/imageAnalysis/Herramientas_Analisis_Imagenes_Integrado_navfix/build/CMakeFiles/edit_cache.dir
+/home/alfredo/Documents/imageAnalysis/Herramientas_Analisis_Imagenes_Integrado_navfix/build/CMakeFiles/rebuild_cache.dir
