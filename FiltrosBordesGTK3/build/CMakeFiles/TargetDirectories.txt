@@ -1,3 +1,0 @@
-/home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/build/CMakeFiles/filtros.dir
-/home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/build/CMakeFiles/edit_cache.dir
-/home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/build/CMakeFiles/rebuild_cache.dir
