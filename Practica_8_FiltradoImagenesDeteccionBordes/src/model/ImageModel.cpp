@@ -26,11 +26,17 @@ bool ImageModel::save_result(const std::string& path, std::string& err){
     try{ img_out_->save(path, "png"); return true; } catch(const Glib::Error& e){ err=e.what(); return false; }
 }
 bool ImageModel::apply_lowpass(const std::string& name, const Params& p, std::string& err){
+    if(!img_in_ || w_<=0 || h_<=0 || gray_.empty()){
+        err="Carga una imagen primero."; return false;
+    }
     auto LP = Kern::LowPassKernels(p.k_gauss, p.sigma);
     for(auto& k : LP) if(k.name==name){ auto out=Conv::Convolve(gray_,w_,h_,k.data,k.k); set_out_from_gray(out,false); return true; }
-    err="Kernel LP no encontrado."; return false;
+    err="Kernel no encontrado para Pasa-bajas."; return false;
 }
 bool ImageModel::apply_highpass(const std::string& name, const Params& p, std::string& err){
+    if(!img_in_ || w_<=0 || h_<=0 || gray_.empty()){
+        err="Carga una imagen primero."; return false;
+    }
     auto HP = Kern::HighPassKernels(p.alpha);
     for(auto& k : HP) if(k.name==name){ auto out=Conv::Convolve(gray_,w_,h_,k.data,k.k); set_out_from_gray(out,true); return true; }
     if(name=="High-boost"){
@@ -40,11 +46,18 @@ bool ImageModel::apply_highpass(const std::string& name, const Params& p, std::s
         for(size_t i=0;i<hb.size();++i) hb[i] = (1.0+p.alpha)*gray_[i] - lp[i];
         set_out_from_gray(hb,true); return true;
     }
-    err="Kernel HP no encontrado."; return false;
+    err="Kernel no encontrado para Pasa-altas."; return false;
 }
-bool ImageModel::apply_edge(const std::string& name, std::string& err){
+bool ImageModel::apply_edge(const std::string& name, const Params& p, std::string& err){
+    if(!img_in_ || w_<=0 || h_<=0 || gray_.empty()){
+        err="Carga una imagen primero."; return false;
+    }
     if(name=="LoG"){
-        auto L=Kern::LoG(7,1.2); auto out=Conv::Convolve(gray_,w_,h_,L,7); set_out_from_gray(out,true); return true;
+        int k = p.k; if(k<3) k=3; if(k%2==0) k+=1;
+        double s = p.sigma; if(s<=0) s=1.0;
+        auto L=Kern::LoG(k,s);
+        auto out=Conv::Convolve(gray_,w_,h_,L,k);
+        set_out_from_gray(out,true); return true;
     }
     if(name=="Laplaciano4"){
         std::vector<double> L{0,-1,0,-1,4,-1,0,-1,0}; auto out=Conv::Convolve(gray_,w_,h_,L,3); set_out_from_gray(out,true); return true;
@@ -70,9 +83,12 @@ bool ImageModel::apply_edge(const std::string& name, std::string& err){
         auto m = Conv::GradMag(gx,gy);
         set_out_from_gray(m, true); return true;
     }
-    err="Kernel de bordes no soportado."; return false;
+    err="Kernel no encontrado para Bordes."; return false;
 }
 bool ImageModel::apply_canny(const Params& p, std::string& err){
+    if(!img_in_ || w_<=0 || h_<=0 || gray_.empty()){
+        err="Carga una imagen primero."; return false;
+    }
     auto edges = Canny::Run(gray_, w_, h_, {p.k_canny, p.sigma_c, p.t_low, p.t_high});
     set_out_from_gray(edges,false); return true;
 }

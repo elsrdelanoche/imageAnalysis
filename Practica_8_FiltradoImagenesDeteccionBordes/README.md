@@ -52,8 +52,9 @@ sudo apt install -y build-essential cmake libgtkmm-3.0-dev
 ## ⚙️ Compilación y ejecución
 
 ```bash
-unzip FiltrosBordesGTK3.zip -d FiltrosBordesGTK3
-cd FiltrosBordesGTK3
+# (si descargaste el .zip)
+unzip Practica_8_FiltradoImagenesDeteccionBordes.zip -d Practica_8_FiltradoImagenesDeteccionBordes
+cd Practica_8_FiltradoImagenesDeteccionBordes
 mkdir build && cd build
 cmake ..
 cmake --build . -j"$(nproc)"
@@ -65,13 +66,13 @@ cmake --build . -j"$(nproc)"
 ## 🖥️ Uso de la aplicación
 
 1. **Cargar imagen:** Se convierte internamente a escala de grises.  
-2. **Seleccionar categoría y kernel:**
+2. **Seleccionar categoría y kernel:** (el selector se actualiza según la categoría)
    - *Pasa-bajas:* Media 3×3 / 5×5 / 7×7, Gaussiano (σ configurable)
    - *Pasa-altas:* Sharpen, Laplaciano (4 / 8 vecinos), High-boost ((1 + α) I − LP)
-   - *Bordes:* Roberts, Prewitt, Sobel, Scharr, Kirsch, Robinson, LoG
+   - *Bordes:* Roberts, Prewitt, Sobel, Scharr, Kirsch, Robinson, Laplaciano, LoG
 3. **Ajustar parámetros:** tamaño de kernel, sigma, α (High-boost), etc.
 4. **Aplicar filtro:** se muestra la imagen resultante.
-5. **Ejecutar Canny:** con k, σ, umbral bajo y alto configurables.
+5. **Ejecutar Canny:** con k, σ, umbral bajo y alto configurables (umbrales relativos al máximo, rango [0,1]).
 6. **Guardar resultado:** exporta la imagen procesada en formato PNG.
 
 ---
@@ -102,4 +103,4 @@ cmake --build . -j"$(nproc)"
 - Visualización auto-escalada (min-max) para derivadas
 - **Reflect padding** (evita bordes oscuros)
 - Kernels configurables en tamaño impar (3 – 31)
-- Soporte para ampliaciones futuras (p. ej., *LoG 9×9* o *DoG)
+- Soporte para ampliaciones futuras (p. ej., *LoG 9×9* o *DoG*)

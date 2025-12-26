@@ -15,11 +15,13 @@ MainWindow::MainWindow(std::shared_ptr<ImageModel> model) : model_(std::move(mod
     grid_.attach(lb_tlow_,0,r,1,1); grid_.attach(sp_tlow_,1,r,2,1); ++r;
     grid_.attach(lb_thigh_,0,r,1,1); grid_.attach(sp_thigh_,1,r,2,1); ++r;
     grid_.attach(btn_apply_,0,r,2,1); grid_.attach(btn_canny_,2,r,1,1); ++r;
-    cb_cat_.append("Pasa-bajas"); cb_cat_.append("Pasa-altas"); cb_cat_.append("Bordes"); cb_cat_.set_active(0);
-    const char* items[] = {"Media 3x3","Media 5x5","Media 7x7","Gauss","Sharpen","Laplaciano4","Laplaciano8","High-boost",
-        "Roberts Gx","Roberts Gy","Prewitt Gx","Prewitt Gy","Prewitt (mag)","Sobel Gx","Sobel Gy","Sobel (mag)",
-        "Scharr Gx","Scharr Gy","Kirsch N","Kirsch E","Robinson N","Robinson E","LoG"};
-    for(auto s: items) cb_kernel_.append(s); cb_kernel_.set_active(0);
+    cb_cat_.append("Pasa-bajas");
+    cb_cat_.append("Pasa-altas");
+    cb_cat_.append("Bordes");
+    cb_cat_.set_active(0);
+
+    // La lista de kernels depende de la categoría.
+    // Se llena desde el controlador (AppController) para evitar "Kernel no encontrado".
     left_.pack_start(fr_file_, Gtk::PACK_SHRINK); left_.pack_start(fr_cfg_, Gtk::PACK_SHRINK);
     fr_in_.add(img_in_w_); fr_out_.add(img_out_w_);
     imgs_row_.pack_start(fr_in_, Gtk::PACK_EXPAND_WIDGET); imgs_row_.pack_start(fr_out_, Gtk::PACK_EXPAND_WIDGET);

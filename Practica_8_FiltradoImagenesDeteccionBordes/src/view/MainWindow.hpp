@@ -32,7 +32,7 @@ private:
     Gtk::Frame fr_cfg_{"Configuración"}; Gtk::Grid grid_;
     Gtk::Label lb_cat_{"Categoría:"}; Gtk::ComboBoxText cb_cat_;
     Gtk::Label lb_kernel_{"Kernel/Técnica:"}; Gtk::ComboBoxText cb_kernel_;
-    Gtk::Label lb_k_{"k (impar):"}; Glib::RefPtr<Gtk::Adjustment> adj_k_ = Gtk::Adjustment::create(3,3,31,2,2); Gtk::SpinButton sp_k_{adj_k_};
+    Gtk::Label lb_k_{"k (impar):"}; Glib::RefPtr<Gtk::Adjustment> adj_k_ = Gtk::Adjustment::create(7,3,31,2,2); Gtk::SpinButton sp_k_{adj_k_};
     Gtk::Label lb_gauss_k_{"k Gauss:"}; Glib::RefPtr<Gtk::Adjustment> adj_gauss_k_ = Gtk::Adjustment::create(5,3,31,2,2); Gtk::SpinButton sp_gauss_k_{adj_gauss_k_};
     Gtk::Label lb_sigma_{"σ Gauss:"}; Glib::RefPtr<Gtk::Adjustment> adj_sigma_ = Gtk::Adjustment::create(1.0,0.2,5.0,0.1,0.5); Gtk::SpinButton sp_sigma_{adj_sigma_};
     Gtk::Label lb_alpha_{"α High-boost:"}; Glib::RefPtr<Gtk::Adjustment> adj_alpha_ = Gtk::Adjustment::create(1.0,0.0,5.0,0.1,0.5); Gtk::SpinButton sp_alpha_{adj_alpha_};

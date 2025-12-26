@@ -3,6 +3,9 @@
 #include <string>
 #include <vector>
 struct Params {
+    // General (p.ej. LoG)
+    int k=7;
+
     int k_gauss=5; double sigma=1.0;
     double alpha=1.0;
     int k_canny=5; double sigma_c=1.0; double t_low=0.1; double t_high=0.2;
@@ -17,7 +20,7 @@ public:
     int height() const { return h_; }
     bool apply_lowpass(const std::string& name, const Params& p, std::string& err);
     bool apply_highpass(const std::string& name, const Params& p, std::string& err);
-    bool apply_edge(const std::string& name, std::string& err);
+    bool apply_edge(const std::string& name, const Params& p, std::string& err);
     bool apply_canny(const Params& p, std::string& err);
 private:
     Glib::RefPtr<Gdk::Pixbuf> img_in_, img_out_;
