@@ -19,54 +19,43 @@ std::vector<double> Run(const std::vector<double>& img, int w, int h, const Para
     std::vector<double> ang(w*h); for(int i=0;i<w*h;++i) ang[i]=std::atan2(gy[i],gx[i]);
     auto nms = Conv::NonMaxSupp(mag,ang,w,h);
 
-    // UI usa [0,1] => umbrales relativos al máximo.
+    // Normaliza magnitud a [0,1] para que T_low / T_high sean intuitivos.
     double mx = 0.0;
     for(double v: nms) mx = std::max(mx, v);
-    if(mx <= 1e-12) return std::vector<double>(w*h, 0.0);
+    if(mx < 1e-12) mx = 1.0;
 
-    double th = p.t_high * mx;
-    double tl = p.t_low  * mx;
-    if(tl > th) std::swap(tl, th);
-
-    // 0 = none, 1 = weak, 2 = strong
-    std::vector<unsigned char> cls(w*h, 0);
+    std::vector<unsigned char> strong(w*h,0), weak(w*h,0);
     for(int i=0;i<w*h;++i){
-        double v = nms[i];
-        if(v >= th) cls[i] = 2;
-        else if(v >= tl) cls[i] = 1;
+        double v = nms[i] / mx;
+        if(v>=p.t_high) strong[i]=1;
+        else if(v>=p.t_low) weak[i]=1;
     }
 
-    // Histéresis completa: expandir desde fuertes y "absorber" débiles conectados.
-    std::vector<double> edges(w*h, 0.0);
-    std::vector<int> st;
-    st.reserve(w*h/8);
+    // Histéresis completa: traza componentes conectadas (8-vecinos) desde píxeles fuertes.
+    std::vector<unsigned char> keep(w*h,0);
+    std::vector<int> stack;
+    stack.reserve(w*h/8);
     for(int i=0;i<w*h;++i){
-        if(cls[i] == 2){
-            edges[i] = 1.0;
-            st.push_back(i);
-        }
+        if(strong[i]){ keep[i]=1; stack.push_back(i); }
     }
-
-    auto inside = [&](int x,int y){ return (x>=0 && x<w && y>=0 && y<h); };
-    while(!st.empty()){
-        int cur = st.back(); st.pop_back();
-        int cx = cur % w;
-        int cy = cur / w;
+    auto inside=[&](int x,int y){ return x>=0 && y>=0 && x<w && y<h; };
+    while(!stack.empty()){
+        int cur = stack.back(); stack.pop_back();
+        int x = cur % w, y = cur / w;
         for(int j=-1;j<=1;++j){
             for(int i=-1;i<=1;++i){
                 if(i==0 && j==0) continue;
-                int nx=cx+i, ny=cy+j;
+                int nx=x+i, ny=y+j;
                 if(!inside(nx,ny)) continue;
                 int ni = ny*w + nx;
-                if(cls[ni] == 1){
-                    cls[ni] = 2;      // promote to strong
-                    edges[ni] = 1.0;
-                    st.push_back(ni);
-                }
+                if(keep[ni]) continue;
+                if(weak[ni]){ keep[ni]=1; stack.push_back(ni); }
             }
         }
     }
 
+    std::vector<double> edges(w*h,0.0);
+    for(int i=0;i<w*h;++i) edges[i] = keep[i] ? 1.0 : 0.0;
     return edges;
 }
 }

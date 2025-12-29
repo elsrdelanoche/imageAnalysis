@@ -1,7 +1,7 @@
 CMakeFiles/filtros.dir/src/utils/Convolution.cpp.o: \
- /home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/src/utils/Convolution.cpp \
+ /home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/src/utils/Convolution.cpp \
  /usr/include/stdc-predef.h \
- /home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/src/utils/Convolution.hpp \
+ /home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/src/utils/Convolution.hpp \
  /usr/include/c++/15.2.1/vector \
  /usr/include/c++/15.2.1/bits/requires_hosted.h \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
@@ -58,7 +58,7 @@ CMakeFiles/filtros.dir/src/utils/Convolution.cpp.o: \
  /usr/include/c++/15.2.1/bits/uses_allocator.h \
  /usr/include/c++/15.2.1/bits/uses_allocator_args.h \
  /usr/include/c++/15.2.1/tuple \
- /home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/src/utils/ImgUtils.hpp \
+ /home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/src/utils/ImgUtils.hpp \
  /usr/include/gtkmm-3.0/gtkmm.h /usr/include/glibmm-2.4/glibmm.h \
  /usr/lib/glibmm-2.4/include/glibmmconfig.h \
  /usr/include/glibmm-2.4/glibmm/thread.h /usr/include/glib-2.0/glib.h \
@@ -107,7 +107,8 @@ CMakeFiles/filtros.dir/src/utils/Convolution.cpp.o: \
  /usr/include/bits/pthreadtypes-arch.h \
  /usr/include/bits/atomic_wide_counter.h /usr/include/bits/struct_mutex.h \
  /usr/include/bits/struct_rwlock.h /usr/include/alloca.h \
- /usr/include/bits/stdlib-float.h /usr/include/c++/15.2.1/bits/std_abs.h \
+ /usr/include/bits/stdlib-bsearch.h /usr/include/bits/stdlib-float.h \
+ /usr/include/c++/15.2.1/bits/std_abs.h \
  /usr/include/glib-2.0/glib/gbacktrace.h /usr/include/signal.h \
  /usr/include/bits/signum-generic.h /usr/include/bits/signum-arch.h \
  /usr/include/bits/types/sig_atomic_t.h \
@@ -233,8 +234,8 @@ CMakeFiles/filtros.dir/src/utils/Convolution.cpp.o: \
  /usr/include/bits/types/__fpos_t.h /usr/include/bits/types/__fpos64_t.h \
  /usr/include/bits/types/struct_FILE.h \
  /usr/include/bits/types/cookie_io_functions_t.h \
- /usr/include/bits/stdio_lim.h /usr/include/c++/15.2.1/cerrno \
- /usr/include/c++/15.2.1/bits/charconv.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/stdio.h \
+ /usr/include/c++/15.2.1/cerrno /usr/include/c++/15.2.1/bits/charconv.h \
  /usr/include/c++/15.2.1/bits/basic_string.tcc \
  /usr/include/c++/15.2.1/bits/locale_classes.tcc \
  /usr/include/c++/15.2.1/system_error \

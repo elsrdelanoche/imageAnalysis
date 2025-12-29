@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"/home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/build/cmake_install.cmake"
+		"/home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/build/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

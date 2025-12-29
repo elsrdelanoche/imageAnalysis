@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3
+CMAKE_SOURCE_DIR = /home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/build
+CMAKE_BINARY_DIR = /home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/filtros.dir/depend.make
@@ -73,116 +73,116 @@ CMakeFiles/filtros.dir/codegen:
 .PHONY : CMakeFiles/filtros.dir/codegen
 
 CMakeFiles/filtros.dir/src/main.cpp.o: CMakeFiles/filtros.dir/flags.make
-CMakeFiles/filtros.dir/src/main.cpp.o: /home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/src/main.cpp
+CMakeFiles/filtros.dir/src/main.cpp.o: /home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/src/main.cpp
 CMakeFiles/filtros.dir/src/main.cpp.o: CMakeFiles/filtros.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/filtros.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/filtros.dir/src/main.cpp.o -MF CMakeFiles/filtros.dir/src/main.cpp.o.d -o CMakeFiles/filtros.dir/src/main.cpp.o -c /home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/filtros.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/filtros.dir/src/main.cpp.o -MF CMakeFiles/filtros.dir/src/main.cpp.o.d -o CMakeFiles/filtros.dir/src/main.cpp.o -c /home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/src/main.cpp
 
 CMakeFiles/filtros.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/filtros.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/src/main.cpp > CMakeFiles/filtros.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/src/main.cpp > CMakeFiles/filtros.dir/src/main.cpp.i
 
 CMakeFiles/filtros.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/filtros.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/src/main.cpp -o CMakeFiles/filtros.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/src/main.cpp -o CMakeFiles/filtros.dir/src/main.cpp.s
 
 CMakeFiles/filtros.dir/src/controller/AppController.cpp.o: CMakeFiles/filtros.dir/flags.make
-CMakeFiles/filtros.dir/src/controller/AppController.cpp.o: /home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/src/controller/AppController.cpp
+CMakeFiles/filtros.dir/src/controller/AppController.cpp.o: /home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/src/controller/AppController.cpp
 CMakeFiles/filtros.dir/src/controller/AppController.cpp.o: CMakeFiles/filtros.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/filtros.dir/src/controller/AppController.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/filtros.dir/src/controller/AppController.cpp.o -MF CMakeFiles/filtros.dir/src/controller/AppController.cpp.o.d -o CMakeFiles/filtros.dir/src/controller/AppController.cpp.o -c /home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/src/controller/AppController.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/filtros.dir/src/controller/AppController.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/filtros.dir/src/controller/AppController.cpp.o -MF CMakeFiles/filtros.dir/src/controller/AppController.cpp.o.d -o CMakeFiles/filtros.dir/src/controller/AppController.cpp.o -c /home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/src/controller/AppController.cpp
 
 CMakeFiles/filtros.dir/src/controller/AppController.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/filtros.dir/src/controller/AppController.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/src/controller/AppController.cpp > CMakeFiles/filtros.dir/src/controller/AppController.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/src/controller/AppController.cpp > CMakeFiles/filtros.dir/src/controller/AppController.cpp.i
 
 CMakeFiles/filtros.dir/src/controller/AppController.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/filtros.dir/src/controller/AppController.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/src/controller/AppController.cpp -o CMakeFiles/filtros.dir/src/controller/AppController.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/src/controller/AppController.cpp -o CMakeFiles/filtros.dir/src/controller/AppController.cpp.s
 
 CMakeFiles/filtros.dir/src/model/ImageModel.cpp.o: CMakeFiles/filtros.dir/flags.make
-CMakeFiles/filtros.dir/src/model/ImageModel.cpp.o: /home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/src/model/ImageModel.cpp
+CMakeFiles/filtros.dir/src/model/ImageModel.cpp.o: /home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/src/model/ImageModel.cpp
 CMakeFiles/filtros.dir/src/model/ImageModel.cpp.o: CMakeFiles/filtros.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/filtros.dir/src/model/ImageModel.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/filtros.dir/src/model/ImageModel.cpp.o -MF CMakeFiles/filtros.dir/src/model/ImageModel.cpp.o.d -o CMakeFiles/filtros.dir/src/model/ImageModel.cpp.o -c /home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/src/model/ImageModel.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/filtros.dir/src/model/ImageModel.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/filtros.dir/src/model/ImageModel.cpp.o -MF CMakeFiles/filtros.dir/src/model/ImageModel.cpp.o.d -o CMakeFiles/filtros.dir/src/model/ImageModel.cpp.o -c /home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/src/model/ImageModel.cpp
 
 CMakeFiles/filtros.dir/src/model/ImageModel.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/filtros.dir/src/model/ImageModel.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/src/model/ImageModel.cpp > CMakeFiles/filtros.dir/src/model/ImageModel.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/src/model/ImageModel.cpp > CMakeFiles/filtros.dir/src/model/ImageModel.cpp.i
 
 CMakeFiles/filtros.dir/src/model/ImageModel.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/filtros.dir/src/model/ImageModel.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/src/model/ImageModel.cpp -o CMakeFiles/filtros.dir/src/model/ImageModel.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/src/model/ImageModel.cpp -o CMakeFiles/filtros.dir/src/model/ImageModel.cpp.s
 
 CMakeFiles/filtros.dir/src/view/MainWindow.cpp.o: CMakeFiles/filtros.dir/flags.make
-CMakeFiles/filtros.dir/src/view/MainWindow.cpp.o: /home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/src/view/MainWindow.cpp
+CMakeFiles/filtros.dir/src/view/MainWindow.cpp.o: /home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/src/view/MainWindow.cpp
 CMakeFiles/filtros.dir/src/view/MainWindow.cpp.o: CMakeFiles/filtros.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/filtros.dir/src/view/MainWindow.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/filtros.dir/src/view/MainWindow.cpp.o -MF CMakeFiles/filtros.dir/src/view/MainWindow.cpp.o.d -o CMakeFiles/filtros.dir/src/view/MainWindow.cpp.o -c /home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/src/view/MainWindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/filtros.dir/src/view/MainWindow.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/filtros.dir/src/view/MainWindow.cpp.o -MF CMakeFiles/filtros.dir/src/view/MainWindow.cpp.o.d -o CMakeFiles/filtros.dir/src/view/MainWindow.cpp.o -c /home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/src/view/MainWindow.cpp
 
 CMakeFiles/filtros.dir/src/view/MainWindow.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/filtros.dir/src/view/MainWindow.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/src/view/MainWindow.cpp > CMakeFiles/filtros.dir/src/view/MainWindow.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/src/view/MainWindow.cpp > CMakeFiles/filtros.dir/src/view/MainWindow.cpp.i
 
 CMakeFiles/filtros.dir/src/view/MainWindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/filtros.dir/src/view/MainWindow.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/src/view/MainWindow.cpp -o CMakeFiles/filtros.dir/src/view/MainWindow.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/src/view/MainWindow.cpp -o CMakeFiles/filtros.dir/src/view/MainWindow.cpp.s
 
 CMakeFiles/filtros.dir/src/utils/ImgUtils.cpp.o: CMakeFiles/filtros.dir/flags.make
-CMakeFiles/filtros.dir/src/utils/ImgUtils.cpp.o: /home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/src/utils/ImgUtils.cpp
+CMakeFiles/filtros.dir/src/utils/ImgUtils.cpp.o: /home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/src/utils/ImgUtils.cpp
 CMakeFiles/filtros.dir/src/utils/ImgUtils.cpp.o: CMakeFiles/filtros.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/filtros.dir/src/utils/ImgUtils.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/filtros.dir/src/utils/ImgUtils.cpp.o -MF CMakeFiles/filtros.dir/src/utils/ImgUtils.cpp.o.d -o CMakeFiles/filtros.dir/src/utils/ImgUtils.cpp.o -c /home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/src/utils/ImgUtils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/filtros.dir/src/utils/ImgUtils.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/filtros.dir/src/utils/ImgUtils.cpp.o -MF CMakeFiles/filtros.dir/src/utils/ImgUtils.cpp.o.d -o CMakeFiles/filtros.dir/src/utils/ImgUtils.cpp.o -c /home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/src/utils/ImgUtils.cpp
 
 CMakeFiles/filtros.dir/src/utils/ImgUtils.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/filtros.dir/src/utils/ImgUtils.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/src/utils/ImgUtils.cpp > CMakeFiles/filtros.dir/src/utils/ImgUtils.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/src/utils/ImgUtils.cpp > CMakeFiles/filtros.dir/src/utils/ImgUtils.cpp.i
 
 CMakeFiles/filtros.dir/src/utils/ImgUtils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/filtros.dir/src/utils/ImgUtils.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/src/utils/ImgUtils.cpp -o CMakeFiles/filtros.dir/src/utils/ImgUtils.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/src/utils/ImgUtils.cpp -o CMakeFiles/filtros.dir/src/utils/ImgUtils.cpp.s
 
 CMakeFiles/filtros.dir/src/utils/Convolution.cpp.o: CMakeFiles/filtros.dir/flags.make
-CMakeFiles/filtros.dir/src/utils/Convolution.cpp.o: /home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/src/utils/Convolution.cpp
+CMakeFiles/filtros.dir/src/utils/Convolution.cpp.o: /home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/src/utils/Convolution.cpp
 CMakeFiles/filtros.dir/src/utils/Convolution.cpp.o: CMakeFiles/filtros.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/filtros.dir/src/utils/Convolution.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/filtros.dir/src/utils/Convolution.cpp.o -MF CMakeFiles/filtros.dir/src/utils/Convolution.cpp.o.d -o CMakeFiles/filtros.dir/src/utils/Convolution.cpp.o -c /home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/src/utils/Convolution.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/filtros.dir/src/utils/Convolution.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/filtros.dir/src/utils/Convolution.cpp.o -MF CMakeFiles/filtros.dir/src/utils/Convolution.cpp.o.d -o CMakeFiles/filtros.dir/src/utils/Convolution.cpp.o -c /home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/src/utils/Convolution.cpp
 
 CMakeFiles/filtros.dir/src/utils/Convolution.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/filtros.dir/src/utils/Convolution.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/src/utils/Convolution.cpp > CMakeFiles/filtros.dir/src/utils/Convolution.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/src/utils/Convolution.cpp > CMakeFiles/filtros.dir/src/utils/Convolution.cpp.i
 
 CMakeFiles/filtros.dir/src/utils/Convolution.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/filtros.dir/src/utils/Convolution.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/src/utils/Convolution.cpp -o CMakeFiles/filtros.dir/src/utils/Convolution.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/src/utils/Convolution.cpp -o CMakeFiles/filtros.dir/src/utils/Convolution.cpp.s
 
 CMakeFiles/filtros.dir/src/utils/Kernels.cpp.o: CMakeFiles/filtros.dir/flags.make
-CMakeFiles/filtros.dir/src/utils/Kernels.cpp.o: /home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/src/utils/Kernels.cpp
+CMakeFiles/filtros.dir/src/utils/Kernels.cpp.o: /home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/src/utils/Kernels.cpp
 CMakeFiles/filtros.dir/src/utils/Kernels.cpp.o: CMakeFiles/filtros.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/filtros.dir/src/utils/Kernels.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/filtros.dir/src/utils/Kernels.cpp.o -MF CMakeFiles/filtros.dir/src/utils/Kernels.cpp.o.d -o CMakeFiles/filtros.dir/src/utils/Kernels.cpp.o -c /home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/src/utils/Kernels.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/filtros.dir/src/utils/Kernels.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/filtros.dir/src/utils/Kernels.cpp.o -MF CMakeFiles/filtros.dir/src/utils/Kernels.cpp.o.d -o CMakeFiles/filtros.dir/src/utils/Kernels.cpp.o -c /home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/src/utils/Kernels.cpp
 
 CMakeFiles/filtros.dir/src/utils/Kernels.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/filtros.dir/src/utils/Kernels.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/src/utils/Kernels.cpp > CMakeFiles/filtros.dir/src/utils/Kernels.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/src/utils/Kernels.cpp > CMakeFiles/filtros.dir/src/utils/Kernels.cpp.i
 
 CMakeFiles/filtros.dir/src/utils/Kernels.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/filtros.dir/src/utils/Kernels.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/src/utils/Kernels.cpp -o CMakeFiles/filtros.dir/src/utils/Kernels.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/src/utils/Kernels.cpp -o CMakeFiles/filtros.dir/src/utils/Kernels.cpp.s
 
 CMakeFiles/filtros.dir/src/utils/Canny.cpp.o: CMakeFiles/filtros.dir/flags.make
-CMakeFiles/filtros.dir/src/utils/Canny.cpp.o: /home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/src/utils/Canny.cpp
+CMakeFiles/filtros.dir/src/utils/Canny.cpp.o: /home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/src/utils/Canny.cpp
 CMakeFiles/filtros.dir/src/utils/Canny.cpp.o: CMakeFiles/filtros.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/filtros.dir/src/utils/Canny.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/filtros.dir/src/utils/Canny.cpp.o -MF CMakeFiles/filtros.dir/src/utils/Canny.cpp.o.d -o CMakeFiles/filtros.dir/src/utils/Canny.cpp.o -c /home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/src/utils/Canny.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/filtros.dir/src/utils/Canny.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/filtros.dir/src/utils/Canny.cpp.o -MF CMakeFiles/filtros.dir/src/utils/Canny.cpp.o.d -o CMakeFiles/filtros.dir/src/utils/Canny.cpp.o -c /home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/src/utils/Canny.cpp
 
 CMakeFiles/filtros.dir/src/utils/Canny.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/filtros.dir/src/utils/Canny.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/src/utils/Canny.cpp > CMakeFiles/filtros.dir/src/utils/Canny.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/src/utils/Canny.cpp > CMakeFiles/filtros.dir/src/utils/Canny.cpp.i
 
 CMakeFiles/filtros.dir/src/utils/Canny.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/filtros.dir/src/utils/Canny.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/src/utils/Canny.cpp -o CMakeFiles/filtros.dir/src/utils/Canny.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/src/utils/Canny.cpp -o CMakeFiles/filtros.dir/src/utils/Canny.cpp.s
 
 # Object files for target filtros
 filtros_OBJECTS = \
@@ -209,7 +209,7 @@ filtros: CMakeFiles/filtros.dir/src/utils/Canny.cpp.o
 filtros: CMakeFiles/filtros.dir/build.make
 filtros: CMakeFiles/filtros.dir/compiler_depend.ts
 filtros: CMakeFiles/filtros.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable filtros"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable filtros"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/filtros.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -221,6 +221,6 @@ CMakeFiles/filtros.dir/clean:
 .PHONY : CMakeFiles/filtros.dir/clean
 
 CMakeFiles/filtros.dir/depend:
-	cd /home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3 /home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3 /home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/build /home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/build /home/alfredo/Documents/imageAnalysis/FiltrosBordesGTK3/build/CMakeFiles/filtros.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes /home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes /home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/build /home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/build /home/alfredo/Documents/imageAnalysis/Practica_8_FiltradoImagenesDeteccionBordes/build/CMakeFiles/filtros.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/filtros.dir/depend
 
