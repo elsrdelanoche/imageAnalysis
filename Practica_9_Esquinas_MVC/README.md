@@ -18,13 +18,13 @@ python main.py
 ```
 
 ## Uso rápido
-1) **File → Open Image A/B** para cargar tu imagen y la antena.  
+1) **File → Open Image A/B** para cargar la imagen y la antena.  
 2) Selecciona **Active Image** (A o B).  
 3) Elige método: **Kirsch**, **Frei‑Chen**, **Harris**.  
 4) Ajusta parámetros (si aplica) y da **Apply** (o **Apply to A + B** para procesar las dos).  
 5) En la derecha tienes pestañas: *Original*, *Response*, *Overlay* (cuando aplica).
 
-## Notas de teoría (para tu reporte)
+## Notas de teoría
 - **Kirsch**: calcula la respuesta en 8 direcciones y toma el máximo (por defecto usamos `max(abs(response))` para no depender del signo del borde).
 - **Frei‑Chen**: usa 9 máscaras ortogonales y estima la “energía” proyectada al subespacio de bordes (W1..W4) vs la energía total (W1..W9).
 - **Harris**: las esquinas son puntos donde la variación de intensidad es alta en *ambas* direcciones (autovalores grandes del tensor de estructura). Se seleccionan picos locales (NMS).
@@ -45,8 +45,8 @@ En distros mínimas a veces no viene instalado:
   sudo dnf install python3-tkinter
   ```
 
-### Exportaciones automáticas (útil para tu reporte)
-Cada vez que aplicas un método, el programa guarda resultados en:
+### Exportaciones automáticas 
+Cada vez que aplica un método, el programa guarda resultados en:
 `<carpeta_de_la_imagen>/outputs/<A|B>_<metodo>/`
 
 - Kirsch: `kirsch_combined.png` y (opcional) `kirsch_N.png`, `kirsch_NE.png`, etc.
@@ -59,5 +59,3 @@ Cada vez que aplicas un método, el programa guarda resultados en:
 - `app/controller/app_controller.py` → eventos, parámetros, render
 - `main.py`                 → arranque
 
----
-Si quieres, después lo adaptamos a tu estilo exacto del proyecto anterior (misma distribución de paneles/controles) o le agregamos exportación automática de resultados a una carpeta.
