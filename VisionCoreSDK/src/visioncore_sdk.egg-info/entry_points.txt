@@ -1,0 +1,2 @@
+[console_scripts]
+visioncore = visioncore_app.app:main

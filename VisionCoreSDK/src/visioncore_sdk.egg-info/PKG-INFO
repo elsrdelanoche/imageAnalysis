@@ -1,0 +1,37 @@
+Metadata-Version: 2.4
+Name: visioncore-sdk
+Version: 0.1.0
+Summary: VisionCore SDK: modular image processing pipeline with a modern desktop UI
+Author: Henry
+License: Academic / internal
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.24
+Requires-Dist: opencv-python>=4.8
+Requires-Dist: PySide6>=6.6
+
+# VisionCore SDK
+
+Aplicación de escritorio (Dark Mode) para procesamiento de imágenes con **pipeline encadenable** y arquitectura **MVC desacoplada**.
+
+## Objetivo
+Unificar los 9 módulos del repositorio original en una sola app profesional, donde:
+- El **Modelo** ejecuta el procesamiento pesado (OpenCV / NumPy).
+- La **Vista** es moderna y minimalista (Qt).
+- El **Controlador** coordina eventos, flujo y encadenamiento entre módulos.
+
+## Módulos funcionales
+- **Preprocessing**: transformaciones de intensidad/color, histogramas, lógicas, geométricas y morfología.
+- **Frequency**: FFT 2D (magnitud / fase).
+- **Segmentation & Edges**: suavizado, realce, Sobel, Canny.
+- **Feature Extraction**: Harris corners.
+
+## Ejecución (Arch Linux + fish)
+Usa `scripts/visioncore.fish`.
+
+## Estructura
+- `src/visioncore/` → SDK (Modelo + pipeline + catálogo de operaciones)
+- `src/visioncore_app/` → UI + controladores
+- `docs/` → arquitectura y guía de migración
+- `tests/` → pruebas unitarias (pytest)
+
